@@ -5,9 +5,9 @@ Skip-Thought Vectors implement by tensorflow
 代码从tensorflow 官网copy来
 做了如下改变:
 
-1.修改部分代码,为了能在中文场景下跑起来
-2.适用Python3.x 的代码 官方的代码在Python3.x下存在部分问题
-3.去掉bazel的编译,直接用shell 主要对bazel不熟，加上国内环境的限制不用
+1. 修改部分代码,为了能在中文场景下跑起来
+2. 适用Python3.x 的代码 官方的代码在Python3.x下存在部分问题
+3. 去掉bazel的编译,直接用shell 主要对bazel不熟，加上国内环境的限制不用
 
 ## 准备训练数据
  训练数据格式:一行一个句子，每个段落用```\n```分割
@@ -37,6 +37,7 @@ cd skip_thoughts
 
 模型基于encoder-decoder的方式，vocab代码中做了限制是20000。我理解主要是在decoder的时候不能有太大的vocab,word2vec用了层次softmax和负采样来解决的
 为了有很多未登录词作者用了线性映射的方法：在word2vec和skip-thoughts的词向量直接做了个线性回归，把word2vec的结果映射到skip-thoughts
+
 
 我在古诗上做的基于字的训练，字相对很少，所以暂时不需要,所以```vocab_expansion.sh```中的word2vec被我去掉了，只是单纯的产生了词向量存储出来
 
