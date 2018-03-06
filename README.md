@@ -2,7 +2,7 @@
 Skip-Thought Vectors implement by tensorflow
 
 
-代码从tensorflow 官网copy来
+代码从tensorflow [官方实现](https://github.com/tensorflow/models/tree/master/research/skip_thoughts)copy来
 做了如下改变:
 
 1. 修改部分代码,为了能在中文场景下跑起来
